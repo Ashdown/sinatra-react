@@ -1,4 +1,4 @@
-Sinatra Test App
+Sinatra React Test App
 ================
 
 Simple Ruby application with the following features
@@ -14,7 +14,7 @@ Simple Ruby application with the following features
     * Sample client
     * Sample database integration (postgres)
     
-[Sinatra Test App on Heroku](https://guarded-caverns-3516.herokuapp.com/) 
+[Sinatra Test App on Heroku](https://sheltered-taiga-2980.herokuapp.com/) 
     
 Helpful Commands
 ----------------
@@ -38,6 +38,10 @@ Set environment variable
 Run locally
 
 `foreman start web`
+
+View locally
+
+[local site](http://localhost:5000/)
 
 For more see
 
