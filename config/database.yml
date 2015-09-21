@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: development
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: development
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
+  host: localhost

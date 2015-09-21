@@ -1,0 +1,10 @@
+$red: #f00;
+$white: #fff;
+
+.red-box {
+  background-color: $red;
+
+  .text {
+    color: $white;
+  }
+}
