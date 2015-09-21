@@ -53,8 +53,6 @@ Database Integration
 For more see
 
 [Making a simple database driven website with sinatra and heroku](https://samuelstern.wordpress.com/2012/11/28/making-a-simple-database-driven-website-with-sinatra-and-heroku/)  
-[Using postgres on Heroku](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on)
-
 
 
 
