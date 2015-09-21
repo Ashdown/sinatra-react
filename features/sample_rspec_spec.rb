@@ -11,10 +11,10 @@ describe 'Sinatra Test Application' do
     Sinatra::Application
   end
 
-  it "says Parnell" do
+  it "says Home Page" do
     get '/'
     expect(last_response).to be_ok
-    expect(last_response.body.include?('Parnell')).to be true
+    expect(last_response.body.include?('Home Page')).to be true
   end
 
 end

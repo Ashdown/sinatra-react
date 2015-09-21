@@ -8,11 +8,10 @@ Capybara.app = Sinatra::Application
 
 feature 'Capybara Test Application' do
 
-  scenario "says Parnell" do
+  scenario "says Home Page" do
     visit '/'
-    click_link('Go to second page')
 
-    expect(page).to have_text('This is the second page')
+    expect(page).to have_text('Home Page')
   end
 
 end

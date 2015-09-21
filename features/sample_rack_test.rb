@@ -13,18 +13,17 @@ class SampleRackTest < Test::Unit::TestCase
     Sinatra::Application
   end
 
-  def test_it_says_parnell
+  def test_it_says_roosevelt
     get '/'
     assert last_response.ok?
-    assert last_response.body.include?('Parnell')
+    assert last_response.body.include?('Roosevelt')
 
   end
 
-  def test_it_says_fred
+  def test_it_says_roosevelt
     get '/'
     assert last_response.ok?
-    # assert last_response.body.include?('Fred')
-    assert last_response.body.include?('Parnell')
+    assert last_response.body.include?('Roosevelt')
 
   end
 
