@@ -11,8 +11,6 @@ Simple Ruby application with the following features
     * Jasmine testing
     * rspec testing
     * Feature testing
-    * Sample client
-    * Sample database integration (postgres)
     * React and sample react module
     
 [Sinatra Test App on Heroku](https://sheltered-taiga-2980.herokuapp.com/) 
