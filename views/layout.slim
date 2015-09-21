@@ -3,6 +3,9 @@ html
   head
     title My Sinatra App
     link href="assets/index.css" rel="stylesheet" type="text/css"
+
   body
     == yield
-    script src="assets/index.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react.js"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/JSXTransformer.js"
+    script type="text/jsx" src="assets/index.js"
