@@ -13,29 +13,3 @@ helpers SampleHelper, DateHelper, EchoHelper
 get '/' do
   slim :index
 end
-
-get '/second' do
-  slim :second
-end
-
-get '/sample' do
-  slim :sample
-end
-
-get '/form' do
-  slim :form
-end
-
-get '/list' do
-  @samples = Sample.all
-  slim :list
-end
-
-post '/submit' do
-  @sample = Sample.new(params[:sample])
-  if @sample.save
-    redirect '/list'
-  else
-    'An error has occured'
-  end
-end
