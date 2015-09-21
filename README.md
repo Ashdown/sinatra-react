@@ -13,6 +13,7 @@ Simple Ruby application with the following features
     * Feature testing
     * Sample client
     * Sample database integration (postgres)
+    * React and sample react module
     
 [Sinatra Test App on Heroku](https://sheltered-taiga-2980.herokuapp.com/) 
     
@@ -46,6 +47,7 @@ View locally
 For more see
 
 [Getting started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby)
+[React TutorialRe](https://facebook.github.io/react/docs/tutorial.html)
 
 Database Integration
 --------------------
