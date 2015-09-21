@@ -1,3 +1,3 @@
-class Sample < ActiveRecord::Base
+class Sample
 
 end

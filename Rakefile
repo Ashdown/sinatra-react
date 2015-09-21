@@ -1,5 +1,4 @@
 require './app'
-require 'sinatra/activerecord/rake'
 require 'rspec/core/rake_task'
 require 'jasmine'
 require 'jshintrb/jshinttask'
