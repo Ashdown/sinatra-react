@@ -8,7 +8,7 @@ Dir[File.join(File.dirname(__FILE__), './lib/models', '*.rb')].each {|file| requ
 
 set :haml, :format => :html5
 
-helpers SampleHelper, DateHelper, EchoHelper
+helpers SampleHelper
 
 get '/' do
   slim :index
