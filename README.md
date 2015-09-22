@@ -11,7 +11,8 @@ Simple Ruby application with the following features
     * Jasmine testing
     * rspec testing
     * Feature testing
-    * React and sample react module
+    * React
+    * Implementation of Flux
     
 [Sinatra Test App on Heroku](https://sheltered-taiga-2980.herokuapp.com/) 
     
