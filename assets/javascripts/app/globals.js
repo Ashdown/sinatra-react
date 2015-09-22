@@ -1,3 +1,6 @@
 var App = {
-    Components: {}
+    Components: {},
+    Actions: {},
+    Constants: {},
+    Stores: {}
 };

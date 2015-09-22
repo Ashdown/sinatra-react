@@ -4,7 +4,7 @@
 (function(React, App) {
 
     React.render(
-        <App.Components.Sample />,
+        <App.Components.Container />,
         document.getElementById('content')
     );
 
