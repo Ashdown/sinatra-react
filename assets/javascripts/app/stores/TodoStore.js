@@ -3,7 +3,8 @@
 
 //    var EventEmitter = require('events').EventEmitter;
 
-    var CHANGE_EVENT = 'change';
+    var CHANGE_EVENT_STRING = 'change';
+    var CHANGE_EVENT = new Event(CHANGE_EVENT_STRING);
     var _todos = {};
 
     /**
@@ -38,61 +39,40 @@
             return _todos;
         },
 
-        addChangeListener: function() {
+        emitChange: function() {
+            App.target.dispatchEvent(CHANGE_EVENT);
+        },
 
-        }
+        addChangeListener: function(callback) {
+            App.target.addEventListener(CHANGE_EVENT_STRING, callback);
+        },
 
+        removeChangeListener: function(callback) {
+            App.target.removeEventListener(CHANGE_EVENT_STRING, callback)
+        },
+
+        dispatcherIndex: App.Dispatcher.register(function (payload) {
+            var action = payload.action;
+            var text;
+
+            switch (action.actionType) {
+                case App.Constants.TodoConstants.TODO_CREATE:
+                    text = action.text.trim();
+                    if (text !== '') {
+                        create(text);
+                        App.Stores.TodoStore.emitChange()
+                    }
+                    break;
+                case App.Constants.TodoConstants.TODO_DESTROY:
+                    destroy(action.id);
+                    App.Stores.TodoStore.emitChange();
+                    break;
+                //add more cases for other action types...ie TODO_UPDATE
+            }
+
+            return true; //=> no errors (needed by promise in dispatcher)
+        })
 
     });
-
-//    App.Stores.TodoStore = assign({}, EventEmitter.prototype, {
-//        /**
-//         * Get the entire collection of ToDos
-//         * return {object}
-//         */
-//        getAll: function () {
-//            return _todos;
-//        },
-//
-//        emitChange: function () {
-//            this.emit(CHANGE_EVENT);
-//        },
-//
-//        /**
-//         * @param {function} callback
-//         */
-//        addChangeListener: function (callback) {
-//            this.on(CHANGE_EVENT, callback);
-//        },
-//
-//        /**
-//         * @param {function} callback
-//         */
-//        removeChangeListener: function (callback) {
-//            this.removeListener(CHANGE_EVENT, callback);
-//        },
-//
-//        dispatcherIndex: App.Dispatcher.register(function (payload) {
-//            var action = payload.action;
-//            var text;
-//
-//            switch (action.actionType) {
-//                case TodoConstants.TODO_CREATE:
-//                    text = action.text.trim();
-//                    if (text !== '') {
-//                        create(text);
-//                        TodoStore.emitChange()
-//                    }
-//                    break;
-//                case TodoConstants.TODO_DESTORY:
-//                    destroy(action.id);
-//                    TodoStore.emitChange();
-//                    break;
-//                //add more cases for other action types...ie TODO_UPDATE
-//            }
-//
-//            return true; //=> no errors (needed by promise in dispatcher)
-//        })
-//    });
 
 })(React, App, objectAssign);

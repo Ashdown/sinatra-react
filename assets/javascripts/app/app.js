@@ -3,6 +3,8 @@
 
 (function(React, App) {
 
+    App.target = document.getElementById('content');
+
     React.render(
         <App.Components.Container />,
         document.getElementById('content')

@@ -7,7 +7,7 @@
             var todos = [];
 
             for (var key in allTodos) {
-                todos.push(<TodoItem key={key} todo={allTodos[key]} />);
+                todos.push(<App.Components.TodoItem key={key} todo={allTodos[key]} />);
             }
 
             return (
