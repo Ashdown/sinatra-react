@@ -1,4 +1,4 @@
-//= require object-assign
+//= require lib/object-assign
 
 (function(Promise, assign) {
 

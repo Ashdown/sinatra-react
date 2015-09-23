@@ -6,7 +6,7 @@
     App.target = document.getElementById('content');
 
     React.render(
-        <App.Components.Container />,
+        React.createElement(App.Components.Container, null),
         document.getElementById('content')
     );
 
