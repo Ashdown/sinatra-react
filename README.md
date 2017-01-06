@@ -19,6 +19,10 @@ Simple Ruby application with the following features
 Helpful Commands
 ----------------
 
+Install dependencies
+
+`bundle install`
+
 Create a new Heroku app
 
 `heroku create`
